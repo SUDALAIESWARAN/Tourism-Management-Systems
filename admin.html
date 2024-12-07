@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Admin page</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        body{
+            margin:100px;
+            padding:90px;
+            background-image: url(frontpage12.png);
+            background-size: cover;
+            height: 47.9vh;
+            background-size: 100% 100%;
+        }
+        h1{
+            text-align: center;
+            margin-top: -15px;
+            height: 45px;
+            background-color: rgba(200,200,200,0.8);
+            font-size: 30px;
+        }
+        .container{
+            margin: 200px;
+            margin-left: 750px;
+            margin-right: 50px;
+            padding: 20px;
+            background-color:rgba(200,200,200,0.8);
+            border-radius: 30px;
+        }
+        .pass{
+            width: 160px;
+            margin-left: 13px;
+            border-radius: 20px;
+        }
+        .name{
+            margin-left: 2px;
+            border-radius: 20px;
+        }
+        .con{
+            width: 70px;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+        }
+        .n{
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+        <form method="post" action="admin.php">
+        <center>
+		<h1>ADMIN PAGE</h1>
+        <div class="container">
+        <h3>ADMIN</h3>
+        <label class="n">User Name :</label> 
+        <input type="text" class="name" id="user" required><br><br>
+        <label class="n">Password :</label> 
+        <input type="password" class="pass" id="password" required><br><br>
+        <input type="button" value="View" class="con" onclick="validateAdmin()">
+        </div>
+		</center>
+		</form>
+    </body>
+    <script>
+        function validateAdmin(){
+            var name = document.getElementById("user").value;
+            var pass = document.getElementById("password").value;
+            if(name=='eswaran' && pass=='Eswaran@59')
+                window.location.href="admin.php";
+            else   
+                alert("Invalid username and password");
+        }
+    </script>
+</html>
